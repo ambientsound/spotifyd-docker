@@ -1,5 +1,5 @@
 FROM rust:stretch as builder
-RUN git clone --depth 1 --branch v0.2.2 https://github.com/Spotifyd/spotifyd /spotifyd
+RUN git clone --depth 1 --branch v0.2.5 https://github.com/Spotifyd/spotifyd /spotifyd
 RUN apt-get update && apt-get install -y libasound2-dev
 RUN cd /spotifyd && cargo build --release
 
